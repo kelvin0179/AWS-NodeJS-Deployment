@@ -12,7 +12,7 @@
 
 ## Elastic IP Address
 
-* The Purpose of Creating this is that everytime we reboot our Instance we are provided with a New IP address for our Site.
+* The Purpose of Creating this is that everytime we reboot our Instance we are provided with a New Public IP address for our Site.
 * So we create an Elastic IP and Assign it to our Instance Running.
 
 ## Start the Server
@@ -153,14 +153,14 @@ sudo service nginx restart
 
 * If you have a student Github account then getting a free domain should be easy.
 * After obtaining the domain , go to its DNS setting and Create two `A Records`.
-* In the both records set the IP to your elastic IP and set you domain name as following.
-* In the first record `<Website>.<Your_Domain_Name>`.
-* In the second record `*.<Website>.<Your_Domain_Name>`.
+* In the both records set the IP to your Elastic IP and set you domain name as following.
+* In the first record `<SubDomain>.<Your_Domain_Name>`.
+* In the second record `*.<SubDomain>.<Your_Domain_Name>`.
 
 ### Example
 
 * My Domain name is `mohitjaiswal.studio`.
-* My Website is `xmeme`.
+* My SubDomain is `xmeme`.
 * So the name of two `A` records are `xmeme.mohitjaiswal.studio` and `*.xmeme.mohitjaiswal.studio`.
 
 ## Edit Server Name in NGINX
