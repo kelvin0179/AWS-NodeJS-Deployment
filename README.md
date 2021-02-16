@@ -91,7 +91,7 @@ sudo nano /etc/nginx/sites-available/default
 ```
 * Now delete all the text and type the following.
 * Be sure to edit the custom ports and endpoints.
-``bash
+```bash
 server {
         root /var/www/html;
 
