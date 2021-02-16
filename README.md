@@ -1,5 +1,8 @@
 # AWS-NodeJS-Deployment
 
+### We worked on a Full stack Project call XMeme and Deployed our Backend on AWS.
+### Kudos to [desert3agle](https://github.com/desert3agle) for making this possible.
+
 ## Instance Creation
 
 * Create an EC-2 Instance in AWS using Ubuntu 18.04.
