@@ -97,7 +97,7 @@ server {
 
         index index.html index.htm index.nginx-debian.html;
 
-        server_name xmeme.harsh-vardhan.codes www.xmeme.harsh-vardhan.codes;
+        server_name your_domain your_domain.codes; # if you dont have a domain name then edit this line as (server_name _;)
 
         #For root directory and My Custom port is 8081 here
         location / {
@@ -130,7 +130,7 @@ server {
         }
 }
 ```
-* Press `ctrl + x` and then 'y' and then press 'enter`
+* Press `ctrl + x` and then `y` and then press `enter`
 
 ```bash
 # Check NGINX config
@@ -141,6 +141,37 @@ sudo service nginx restart
 ```
 
 * Everytime you edit your NGINX file you need to restart it.
+
+# Your http deployment should be ready.
+
+# For https you have to have a Domain name
+
+## [Name.com](https://www.name.com/partner/github-students)
+
+* If you have a student Github account then getting a free domain should be easy.
+* After obtaining the domain , go to its DNS setting and Create two `A Records`.
+* In the both records set the IP to your elastic IP and set you domain name as following.
+* In the first record (<Website>.<Your_Domain_Name>).
+* In the second record (*.<Website>.<Your_Domain_Name>).
+
+### Example
+
+* My Domain name is `mohitjaiswal.studio`.
+* My Website is `xmeme`.
+* So the name of two `A` records are `xmeme.mohitjaiswal.studio` and `*.xmeme.mohitjaiswal.studio`.
+
+## Add SSL with LetsEncrypt
+
+```bash
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
+sudo apt-get install python-certbot-nginx
+sudo certbot --nginx -d yourdomain -d www.yourdomain
+
+# Only valid for 90 days, test the renewal process with
+certbot renew --dry-run
+```
+
 
 
 
