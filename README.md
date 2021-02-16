@@ -100,7 +100,7 @@ server {
 
         index index.html index.htm index.nginx-debian.html;
 
-        server_name your_domain your_domain.codes; # if you dont have a domain name then edit this line as (server_name _;)
+        server_name your_domain www.your_domain; # if you dont have a domain name then edit this line as (server_name _;)
 
         #For root directory and My Custom port is 8081 here
         location / {
