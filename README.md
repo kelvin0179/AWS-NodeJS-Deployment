@@ -165,7 +165,7 @@ sudo service nginx restart
 
 ## Edit Server Name in NGINX
 
-* Now that the Domain Name is Creater we just have to edit the server name at
+* Now that the Domain Name is Created we just have to edit the server name at
 ```bash
 sudo nano /etc/nginx/sites-available/default
 ```
