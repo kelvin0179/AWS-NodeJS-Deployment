@@ -130,7 +130,7 @@ server {
         }
 }
 ```
-* Press `ctrl + x` and then `y` and then press `enter`
+* Press `ctrl + x` and then `y` and then press `enter`.
 
 ```bash
 # Check NGINX config
@@ -151,14 +151,32 @@ sudo service nginx restart
 * If you have a student Github account then getting a free domain should be easy.
 * After obtaining the domain , go to its DNS setting and Create two `A Records`.
 * In the both records set the IP to your elastic IP and set you domain name as following.
-* In the first record (<Website>.<Your_Domain_Name>).
-* In the second record (*.<Website>.<Your_Domain_Name>).
+* In the first record `<Website>.<Your_Domain_Name>`.
+* In the second record `*.<Website>.<Your_Domain_Name>`.
 
 ### Example
 
 * My Domain name is `mohitjaiswal.studio`.
 * My Website is `xmeme`.
 * So the name of two `A` records are `xmeme.mohitjaiswal.studio` and `*.xmeme.mohitjaiswal.studio`.
+
+## Edit Server Name in NGINX
+
+* Now that the Domain Name is Creater we just have to edit the server name at
+```bash
+sudo nano /etc/nginx/sites-available/default
+```
+* Edit the Line
+```bash
+server name your_domain www.your_domain;
+```
+* Press `ctrl + x` and then `y` and then press `enter`.
+* Restart NGINX with
+```bash
+sudo nginx -t
+sudo service nginx restart
+```
+
 
 ## Add SSL with LetsEncrypt
 
@@ -172,6 +190,7 @@ sudo certbot --nginx -d yourdomain -d www.yourdomain
 certbot renew --dry-run
 ```
 
+# Congratulations On Your https Deployment !
 
 
 
