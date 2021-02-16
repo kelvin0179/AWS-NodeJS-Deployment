@@ -24,7 +24,7 @@ chmod 400 <fileName>.pem
 ssh -i "<fileName>.pem" ubuntu@ec<Elastic IP>.us-east-2.compute.amazonaws.com
 ```
 
-* This should start your server.
+* Now you should be in the AWS Ubuntu Terminal.
 
 ## Clone Your NodeJS Project
 
